@@ -17,8 +17,9 @@ class OAuth2(object):
     uri_token = API_URL + '/oauth2/token/'
     uri_redirect = 'notscheme://localhost/'
 
-    def __init__(self, consumer_key: str, consumer_secret: str,
+    def __init__(self, uri_redirect: str, consumer_key: str, consumer_secret: str,
                  username: str, password: str):
+        self.uri_redirect = uri_redirect
         self.consumer_key = consumer_key
         self.consumer_secret = consumer_secret
         self.username = username
